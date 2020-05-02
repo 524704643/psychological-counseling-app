@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#03cbae"
+        android:paddingTop="10dp"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/result_back"
+            android:layout_width="30dp"
+            android:src="@drawable/icon_back"
+            android:layout_height="30dp" />
+        <LinearLayout
+            android:id="@+id/home_search"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/home_search_shape">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_search"
+                android:scaleType="fitCenter"
+                android:layout_height="25dp" />
+            <EditText
+                android:id="@+id/result_edit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:textColor="#03cbae"
+                android:textSize="15sp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:gravity="center_vertical"
+                android:hint="请输入要查询的内容"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/SearchNoneLayout"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/nonesearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/none_search"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未搜索到对应专家，请查询其他条件试试"
+            android:layout_below="@+id/nonesearch"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/result_RecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
+

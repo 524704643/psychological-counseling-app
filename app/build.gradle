@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    useLibrary 'org.apache.http.legacy'//bmob
+    defaultConfig {
+        applicationId "com.example.tiongradua.graduationproject"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    //添
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
+    compile 'com.android.support:appcompat-v7:28.+'
+    compile 'cn.bmob.android:bmob-sdk:3.7.3-rc1'
+    compile 'io.reactivex.rxjava2:rxjava:2.2.2'
+    compile 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    compile 'com.squareup.okio:okio:2.1.0'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'com.squareup.okhttp3:okhttp:3.12.0'
+    compile 'cn.bmob.android:http-legacy:1.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.github.bigdongdong:ChatView:1.2'
+    testCompile 'junit:junit:4.12'
+}

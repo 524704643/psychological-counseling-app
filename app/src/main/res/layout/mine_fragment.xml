@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:CircleImageView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.example.tiongradua.graduationproject.Fragment.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+     <!--第一层   -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/bg_mine">
+            <ImageView
+                android:id="@+id/mine_comingInfo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_myinfo_modify"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"/>
+            <com.example.tiongradua.graduationproject.HeadPicture.CircleImageView
+                android:id="@+id/mine_headphoto"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                CircleImageView:border_width="2dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/mine_login_pig" />
+            <LinearLayout
+                android:id="@+id/isSpecialistLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:paddingRight="10dp"
+                android:layout_marginTop="-15dp"
+                android:layout_below="@+id/mine_headphoto"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/specialist_shape">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#5b5b5b"
+                    android:textSize="18sp"
+                    android:text="咨询师"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+     <!--登录注册按钮   -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="-20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/mine_login_shape">
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/mine_login_register"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="点击头像登陆"
+                android:textSize="18sp"
+                android:backgroundTint="@null"
+                android:textColor="#5b5b5b"
+                android:background="@null" />
+            <ImageView
+                android:id="@+id/mine_sex"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_women"/>
+        </LinearLayout>
+
+
+     <!--第二层-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_height="60dp">
+            <LinearLayout
+                style="@style/MineTwoItemStyle">
+                <ImageView
+                    style="@style/MineTwoItemImageStyle"
+                    android:src="@drawable/mine_dynamic"/>
+                <TextView
+                    style="@style/MineTwoItemTextStyle"
+                    android:text="动态"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MineTwoItemStyle">
+                <ImageView
+                    style="@style/MineTwoItemImageStyle"
+                    android:src="@drawable/mine_interesting"/>
+                <TextView
+                    style="@style/MineTwoItemTextStyle"
+                    android:text="关注"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MineTwoItemStyle">
+                <ImageView
+                   style="@style/MineTwoItemImageStyle"
+                    android:src="@drawable/mine_fans"/>
+                <TextView
+                    style="@style/MineTwoItemTextStyle"
+                    android:text="粉丝"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Linear_setting"
+                style="@style/MineTwoItemStyle">
+                <ImageView
+                    style="@style/MineTwoItemImageStyle"
+                    android:src="@drawable/mine_setting"/>
+                <TextView
+                    style="@style/MineTwoItemTextStyle"
+                    android:text="设置"/>
+            </LinearLayout>
+        </LinearLayout>
+     <!--分隔符   -->
+        <View
+            style="@style/MineDividerLongWidthStyle"/>
+
+     <!--第三层-->
+        <RelativeLayout
+           style="@style/MineThreeItemStyle">
+            <ImageView
+                style="@style/MineThreeItemImage1Style"
+                android:id="@+id/Iv_mytest"
+                android:src="@drawable/icon_ceshi"/>
+            <TextView
+                style="@style/MineThreeItemTextStyle"
+                android:text="我的测试"
+                android:layout_toRightOf="@+id/Iv_mytest"
+                />
+            <ImageView
+                style="@style/MineThreeItemImage2Style"/>
+        </RelativeLayout>
+        <View
+            style="@style/MineDividerStyle"/>
+
+        <RelativeLayout
+        style="@style/MineThreeItemStyle">
+        <ImageView
+            style="@style/MineThreeItemImage1Style"
+            android:id="@+id/Iv_safe"
+            android:src="@drawable/icon_yinsi"/>
+        <TextView
+            style="@style/MineThreeItemTextStyle"
+            android:text="隐私安全"
+            android:layout_toRightOf="@+id/Iv_safe" />
+        <ImageView
+            style="@style/MineThreeItemImage2Style"/>
+    </RelativeLayout>
+        <View
+           style="@style/MineDividerStyle"/>
+
+        <RelativeLayout
+            style="@style/MineThreeItemStyle">
+            <ImageView
+                style="@style/MineThreeItemImage1Style"
+                android:id="@+id/Iv_help"
+                android:src="@drawable/icon_help"/>
+            <TextView
+               style="@style/MineThreeItemTextStyle"
+                android:text="帮助中心"
+                android:layout_toRightOf="@+id/Iv_help" />
+            <ImageView
+                style="@style/MineThreeItemImage2Style"/>
+        </RelativeLayout>
+        <View
+            style="@style/MineDividerStyle"/>
+
+        <RelativeLayout
+            style="@style/MineThreeItemStyle">
+            <ImageView
+                style="@style/MineThreeItemImage1Style"
+                android:id="@+id/Iv_about"
+                android:src="@drawable/icon_about"/>
+            <TextView
+                style="@style/MineThreeItemTextStyle"
+                android:text="关于我们"
+                android:layout_toRightOf="@+id/Iv_about" />
+            <ImageView
+                style="@style/MineThreeItemImage2Style"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/MineDividerLongWidthStyle"/>
+        <RelativeLayout
+            android:id="@+id/becomeSpecialLayout"
+            style="@style/MineThreeItemStyle">
+            <ImageView
+                style="@style/MineThreeItemImage1Style"
+                android:id="@+id/Iv_specialist_add"
+                android:src="@drawable/icon_specialist2"/>
+            <TextView
+                style="@style/MineThreeItemTextStyle"
+                android:text="专家入驻"
+                android:layout_toRightOf="@+id/Iv_specialist_add" />
+            <ImageView
+                style="@style/MineThreeItemImage2Style"/>
+        </RelativeLayout>
+        <View
+            style="@style/MineDividerStyle"/>
+
+        <RelativeLayout
+            style="@style/MineThreeItemStyle">
+            <ImageView
+                style="@style/MineThreeItemImage1Style"
+                android:id="@+id/Iv_share"
+                android:src="@drawable/icon_shape"/>
+            <TextView
+                style="@style/MineThreeItemTextStyle"
+                android:text="分享"
+                android:layout_toRightOf="@+id/Iv_share" />
+            <ImageView
+                style="@style/MineThreeItemImage2Style"/>
+        </RelativeLayout>
+        <View
+            style="@style/MineDividerStyle"/>
+
+        <RelativeLayout
+            style="@style/MineThreeItemStyle">
+            <ImageView
+                style="@style/MineThreeItemImage1Style"
+                android:id="@+id/Iv_tuiguang"
+                android:src="@drawable/icon_red"/>
+            <TextView
+                style="@style/MineThreeItemTextStyle"
+                android:text="推广奖励"
+                android:layout_toRightOf="@+id/Iv_tuiguang" />
+            <ImageView
+            style="@style/MineThreeItemImage2Style"/>
+        </RelativeLayout>
+        <View
+            style="@style/MineDividerLongWidthStyle"/>
+    </LinearLayout>
+
+</ScrollView>

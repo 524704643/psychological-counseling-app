@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.example.tiongradua.graduationproject.DynamicDetailsActivity">
+
+    <RelativeLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/details_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5e5d5b"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:text="动态详情"/>
+    </RelativeLayout>
+    <View
+        style="@style/MineDividerStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.example.tiongradua.graduationproject.SearchResultActivity">
+
+            <ListView
+                android:id="@+id/details_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:listSelector="#00000000">
+
+            </ListView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="15dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ececec">
+        <EditText
+            android:id="@+id/detail_Et"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="发表评论"
+            android:textSize="18sp"
+            android:singleLine="false"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/mine_login_shape"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/details_send"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textColor="#de5a5a"
+            android:background="#00000000"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

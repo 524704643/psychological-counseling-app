@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.tiongradua.graduationproject.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cecece"/>
+
+    <LinearLayout
+        android:id="@+id/MenuTab"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            style="@style/MainSecondLinear">
+            <ImageView
+                android:background="@drawable/main_home_selector"
+                style="@style/MainSecondLinearImage" />
+            <TextView
+               style="@style/MainSecondLinearTextview"
+                android:text="首页"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainSecondLinear">
+            <ImageView
+                android:background="@drawable/main_xinli_selector"
+                style="@style/MainSecondLinearImage" />
+            <TextView
+                style="@style/MainSecondLinearTextview"
+                android:text="心理问答"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/MainSecondLinear">
+            <ImageView
+                android:background="@drawable/main_my_selector"
+                style="@style/MainSecondLinearImage"  />
+            <TextView
+                style="@style/MainSecondLinearTextview"
+                android:text="个人中心"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
